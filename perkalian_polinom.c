@@ -9,7 +9,7 @@ int main()
 
     printf("Masukkan jumlah suku f: ");
     scanf("%d", &n);
-    for (i = 0; i < n; ++i){
+    for (i = 0; i <= n; ++i){
         printf("Masukkan koefisien x^%d: ", i);
         scanf("%d", &f[i]);
     }
@@ -19,7 +19,7 @@ int main()
 
     printf("\nMasukkan jumlah suku g: ");
     scanf("%d", &m);
-    for (j = 0; j < m; ++j){
+    for (j = 0; j <= m; ++j){
         printf("Masukkan koefisien x^%d: ", j);
         scanf("%d", &g[j]);
     }
@@ -48,8 +48,16 @@ void printPolynom(int poly[], int num)
     int k;
 
     for (k = 0; k < num; ++k){
+    	if (poly[k] != 0){
         printf("%d", poly[k]);
-        if (k != 0){
+    	}
+    	else if (poly[k] == 0){
+    		continue;
+		}
+		if (k == 1){
+        	printf("x");
+    	}
+        else if (k != 0){
             printf("x^%d", k);
         }
         if (k < (num - 1)){
