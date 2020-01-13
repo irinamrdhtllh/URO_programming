@@ -7,9 +7,9 @@ int main()
     int a, b, c, i, j, n, m;
     int f[100], g[100], result[100];
 
-    printf("Masukkan jumlah suku f: ");
+    printf("Masukkan derajat tertinggi polinom f (n-1) : ");
     scanf("%d", &n);
-    for (i = 0; i <= n; ++i){
+    for (i = 0; i < n; ++i){
         printf("Masukkan koefisien x^%d: ", i);
         scanf("%d", &f[i]);
     }
@@ -17,9 +17,9 @@ int main()
     printf("Polinom pertama adalah: ");
     printPolynom(f, n);
 
-    printf("\nMasukkan jumlah suku g: ");
+    printf("\nMasukkan derajat tertinggi polinom g (m-1): ");
     scanf("%d", &m);
-    for (j = 0; j <= m; ++j){
+    for (j = 0; j < m; ++j){
         printf("Masukkan koefisien x^%d: ", j);
         scanf("%d", &g[j]);
     }
