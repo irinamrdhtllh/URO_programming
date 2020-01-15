@@ -16,10 +16,30 @@ int main() {
 	for (k = 0; k <= n; k++) {
 		if(k != 0) {
 			if (k == 1) {
-				printf("%dx", a[k]);
+				if (a[k] != 0) {
+					if (a[k] == 1){
+						printf("x");
+					}
+					else{
+						printf("%dx", a[k]);
+					}
+				}
+				else {
+					continue;
+				}
 			}
 			else {
-			printf("%dx^%d", a[k], k);
+				if (a[k] == 0){
+					continue;
+				}
+				else {
+					if (a[k] == 1){
+						printf("x^%d", k);
+					}
+					else {
+						printf("%dx^%d", a[k], k);
+					}
+				}
 			}
 		}
 		else if(k == 0){
